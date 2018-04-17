@@ -10,7 +10,7 @@ CURRENT_ENV = 'dev'
 env = environ.Env()
 env.read_env('./todo_project/env/{}.env'.format(CURRENT_ENV))
 
-ALLOWED_HOSTS = ['workshop33.herokuapp.com']
+ALLOWED_HOSTS = ['workshop33.herokuapp.com', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
