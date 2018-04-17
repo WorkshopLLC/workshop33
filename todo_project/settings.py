@@ -5,12 +5,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '4ull-g#rv!-3x=v4o^=f*o25c7^+52b98k8bejc(i78%o#6c8k'
 
-DEBUG = True
+DEBUG = False
 CURRENT_ENV = 'dev'
 env = environ.Env()
 env.read_env('./todo_project/env/{}.env'.format(CURRENT_ENV))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['workshop33.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
