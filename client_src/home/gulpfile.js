@@ -19,7 +19,7 @@ gulp.task('styles', function () {
         return merge(scssStream, cssStream)
             .pipe(concat('styles.css'))
             .pipe(minify())
-            .pipe(gulp.dest('../../static_dist/home/styles'));
+            .pipe(gulp.dest('../../static/home/styles'));
     }
     else {
         var cssStream = gulp.src('./styles/vendor/css/main.css')
@@ -34,7 +34,7 @@ gulp.task('styles', function () {
         return merge(scssStream, cssStream)
             .pipe(concat('styles.css'))
             .pipe(minify())
-            .pipe(gulp.dest('../../static_dist/home/styles'));
+            .pipe(gulp.dest('../../static/home/styles'));
     }
 });
 
