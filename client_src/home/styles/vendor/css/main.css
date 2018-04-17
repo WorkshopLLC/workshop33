@@ -1,0 +1,10 @@
+ul li {
+    color: blue;
+    list-style: none;
+}
+
+a {
+    font-size: 18px;
+    text-underline: none;
+    text-decoration: none;
+}

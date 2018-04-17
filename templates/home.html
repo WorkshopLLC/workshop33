@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'home/styles/styles.css' %}">
+</head>
+<body>
+<main>
+    <h1>TO DO:</h1>
+    <ul>
+        {% for todo_item in todo_all %}
+            <li>
+                <a href="#">{{ todo_item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <h1>DOING:</h1>
+    <h1>DONE:</h1>
+</main>
+</body>
+</html>

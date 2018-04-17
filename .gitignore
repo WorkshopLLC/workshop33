@@ -1,0 +1,12 @@
+staticfiles/
+media/
+static_dist/
+*.pyc
+.idea/
+*.*~
+node_modules/
+bower_components/
+__pycache__
+*.db
+*.log
+**/**/package-lock.json
