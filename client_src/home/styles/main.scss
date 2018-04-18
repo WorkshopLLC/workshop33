@@ -1,3 +1,55 @@
-h1{
-  color: #00F;
+@import "abstracts/index";
+@import "base/index";
+
+* {
+  font-family: "Arial", Georgia, Serif;
+}
+
+h1 {
+  color: #FFF;
+  text-align: left;
+}
+
+a {
+  font-size: 18px;
+  text-underline: none;
+  text-decoration: none;
+  color: #8350F6;
+
+  &:hover {
+    cursor: move;
+  }
+}
+
+.tablero-container {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  vertical-align: top;
+
+  .tablero-content {
+    margin: 25px;
+    padding: 20px 40px;
+    background: #5D1BAC;
+    border-radius: 7px;
+
+    .tablero-content__list {
+      ul {
+        padding: 0;
+      }
+    }
+  }
+}
+@include tablet() {
+  .tablero-container {
+    display: inline-block;
+    width: 49%;
+  }
+}
+
+@include laptop-small() {
+  .tablero-container {
+    display: inline-block;
+    width: 32%;
+  }
 }

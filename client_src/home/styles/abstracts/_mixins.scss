@@ -1,0 +1,35 @@
+@mixin mobile {
+  @media #{$mobile} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin laptop-small {
+  @media #{$laptop-small} {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media #{$laptop} {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media #{$desktop-small} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}

@@ -1,0 +1,46 @@
+@import "../abstracts/index";
+
+.adl-container {
+  width: 95%;
+  max-width: 400px;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@include mobile {
+  .adl-container {
+    max-width: 450px;
+  }
+}
+
+
+@include tablet {
+  .adl-container {
+    max-width: 780px;
+  }
+}
+
+@include laptop-small {
+  .adl-container {
+    max-width: 950px;
+  }
+}
+
+@include laptop {
+  .adl-container {
+    max-width: 1150px;
+  }
+}
+
+@include desktop-small {
+  .adl-container {
+    max-width: 1250px;
+  }
+}
+
+@include desktop {
+  .adl-container {
+    max-width: 1500px;
+  }
+}

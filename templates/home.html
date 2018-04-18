@@ -5,19 +5,103 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'home/styles/styles.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log('init2');
+
+           $('.sortable-list').sortable({
+                connectWith: '.sortable-list',
+                update: function (event, ui) {
+
+                    var changedList = this.id;
+                    var order = $(this).sortable('toArray');
+                    var positions = order.join(';');
+
+                    /*console.log({
+                        id: changedList,
+                        positions: positions
+                    });
+
+                    if ($('#image-list1').height() <= 0) {
+                        console.log("0");
+                        $('#image-list1').height(10)
+                    }else{
+                        $('#image-list1').css('height', 'auto');
+                    }*/
+
+                    /*if ($('#image-list1').height() === 10) {
+                        console.log("AUTO");
+
+                    }*/
+                    console.log($('#image-list1').height(), '1');
+                    console.log($('#image-list2').height(), '2');
+                }
+            });
+
+
+        })
+
+    </script>
 </head>
 <body>
 <main>
-    <h1>TO DO:</h1>
-    <ul>
-        {% for todo_item in todo_all %}
-            <li>
-                <a href="#">{{ todo_item.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-    <h1>DOING:</h1>
-    <h1>DONE:</h1>
+    <div class="adl-container">
+        <div class="tablero-container">
+            <div class="tablero-content">
+                <div class="tablero-content__name">
+                    <h1>TO DO</h1>
+                </div>
+
+                <div class="tablero-content__list">
+                    <ul id="image-list1" class="sortable-list">
+                        {% for todo_item in todo_all %}
+                            <li id="{{ todo_item.id }}" class="list__item">
+                                <a href="#">{{ todo_item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tablero-container">
+            <div class="tablero-content">
+                <div class="tablero-content__name">
+                    <h1>DOING</h1>
+                </div>
+
+                <div class="tablero-content__list">
+                    <ul id="image-list2" class="sortable-list">
+                        {% for todo_doing_item in todo_doing_all %}
+                            <li id="{{ todo_doing_item.id }}" class="list__item">
+                                <a href="#">{{ todo_doing_item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tablero-container">
+            <div class="tablero-content">
+                <div class="tablero-content__name">
+                    <h1>DONE</h1>
+                </div>
+                <div class="tablero-content__list">
+                    <ul id="image-list3" class="sortable-list">
+                        {% for todo_done_item in todo_done_all %}
+                            <li id="{{ todo_done_item.id }}" class="list__item">
+                                <a href="#">{{ todo_done_item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
+
 </body>
 </html>

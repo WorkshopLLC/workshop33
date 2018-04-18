@@ -1,10 +1,17 @@
-ul li {
-    color: blue;
+li {
     list-style: none;
 }
 
-a {
-    font-size: 18px;
-    text-underline: none;
-    text-decoration: none;
+.list__item {
+    list-style: none;
+    margin: -20px 0 35px 0;
+    background: #FFF;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
 }
+
+.list__item--init {
+    visibility: hidden;
+}
+
