@@ -20,7 +20,7 @@
     "gulp-util": "^3.0.8",
     "humps": "^1.1.0",
     "isotope-layout": "^3.0.5",
-    "jquery": "^2.2.4",
+    "jquery": "^3.0.0",
     "jquery-comments": "^1.0.1",
     "jquery-localization-tool": "git+https://github.com/darksmo/jquery-localization-tool.git",
     "lodash": "^4.17.4",
