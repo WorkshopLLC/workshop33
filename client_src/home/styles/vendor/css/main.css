@@ -4,7 +4,7 @@ li {
 
 .list__item {
     list-style: none;
-    margin: -20px 0 35px 0;
+    margin: 20px 0;
     background: #FFF;
     padding: 20px;
     border-radius: 5px;
